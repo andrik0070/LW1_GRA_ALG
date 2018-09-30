@@ -64,8 +64,8 @@ def display():
     global moves
     global points
 
-    pprint(moves)
-    pprint(points)
+    glEnable(GL_CLIP_PLANE0)
+    glClipPlane(GL_CLIP_PLANE0, (-7500, 7500, 0, 0))
 
     for move in moves:
         if move < 0:
@@ -73,6 +73,8 @@ def display():
         else:
             line_to(points[move - 1])
         glFlush()
+
+    glDisable(GL_CLIP_PLANE0)
 
 
 def reshape(w, h):
