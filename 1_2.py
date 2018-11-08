@@ -64,9 +64,6 @@ def display():
     global moves
     global points
 
-    pprint(moves)
-    pprint(points)
-
     for move in moves:
         if move < 0:
             move_to(points[abs(move) - 1])
