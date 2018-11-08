@@ -54,7 +54,6 @@ def line_to(point):
     glEnd()
     currentPoint = point
 
-
 def display():
     glClearColor(1, 1, 1, 0)
     glClear(GL_COLOR_BUFFER_BIT)
